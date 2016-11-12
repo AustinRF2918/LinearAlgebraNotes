@@ -4,5 +4,25 @@
    because on top of being a *subset* of some 
 
    #+BEGIN_SRC latex
-    \begin{equation}\mathbb{R}\end{equation} 
+    \begin{equation}\mathbb{R}^n\end{equation} 
    #+END_SRC
+   
+   It also has the following attributes:
+   #+BEGIN_SRC latex
+     Let vec{u}, vec{v} exist such that 
+     \begin{equation}A\vec{u} = vec{0}\end{equation}
+     and
+     \begin{equation}A\vec{v} = vec{0}\end{equation}
+
+     Due to these facts we know
+     \begin{equation}A\vec{0} = vec{0}\end{equation}
+     \begin{equation}A\vec{u + v} = A\vec{u} + V\vec{v} = vec{0} + vec{0} = vec{0}\end{equation}
+     \begin{equation}cA\vec{u} = cvec{0}\end{equation}
+     which in turn means
+     \begin{equation}cA\vec{u} = vec{0}\end{equation}
+     which also means
+     \begin{equation}Ac\vec{u} = vec{0}\end{equation}
+   #+END_SRC
+   
+   These three facts are the definition of a subspace, therfore we have shown
+   why the null space is, in fact, a space.
