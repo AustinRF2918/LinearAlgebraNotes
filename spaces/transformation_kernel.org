@@ -1,0 +1,41 @@
+* Transformation Kernel
+** What Is A Transformation Again?
+   Recall that a transformation is basically a function that
+   takes a vector as a parameter and gives a certain output.
+   The core functionality is based in some matrix A where 
+   Ax == b, which provides us some function T such that:
+
+   #+BEGIN_SRC mathematica
+     T[x_] == b
+   #+END_SRC
+   
+   Where V is some vector in 
+   #+BEGIN_SRC latex
+    \begin{equation}\mathbb{R}^n\end{equation} 
+   #+END_SRC
+   
+   and W is some vector in
+   #+BEGIN_SRC latex
+    \begin{equation}\mathbb{R}^m\end{equation} 
+   #+END_SRC
+   
+   Note that the external "API" of a transform must maintain
+   the following properties:
+
+   #+BEGIN_SRC mathematica
+    T[u + v] == T[u] + T[v]
+   #+END_SRC
+   
+   and
+
+   #+BEGIN_SRC mathematica
+    T[c*u] == cT[u]
+   #+END_SRC
+   
+   Also note that this is basically mathematical "syntactic sugar"
+   over the regular Ax == b. It just allows us to use matrices as
+   function declarations and not have the weird solution syntax.
+   Granted, there is probably more to transforms, like the way
+   that transformations from one dimension to another can be 
+   displayed with transformations very easily, but the entire 
+   semantic meaning of a transformation is out of my league.
