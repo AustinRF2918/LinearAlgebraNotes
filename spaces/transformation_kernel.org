@@ -39,3 +39,31 @@
    that transformations from one dimension to another can be 
    displayed with transformations very easily, but the entire 
    semantic meaning of a transformation is out of my league.
+
+** Okay, So What Is A Kernel?
+*** Intuition
+    Kernel (think of core) is closely related to the null space.
+    Think of it as coercion of a transform function: unwrapping the
+    syntactic sugar that wraps it, and getting directly to the 
+    null space (aka solutions at zero) of said internal matrix.
+
+*** Formal Definition
+    The formal definition of a kernel of a linear transformation
+    T is the set of all vectors  u such that
+
+   #+BEGIN_SRC mathematica
+     T[u] == 0
+   #+END_SRC
+   
+   Where u is an arbitrary vector and 0 is the zero vector.
+   
+*** The Range Of T
+    The range, on the other hand is defined by all vectors
+    in our transformation input space, such that 
+    T[x] is defined.
+    
+**** Matrix Transformation
+     In the case that T is a matrix transformation, which I
+     have been assuming is true, then the kernal and range 
+     of T are the null space and column space of the internal
+     matrix, coerced.
