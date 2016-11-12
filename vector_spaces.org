@@ -1,0 +1,4 @@
+* Null Space
+** Relation To Subspace
+   We can note that Null *Space* includes the word space in it: This is
+   because on top of being a *subset* of some \begin{equation}\mathbb{R}\end{equation}
