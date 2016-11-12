@@ -1,6 +1,6 @@
 * Null Space
 ** Relation To Subspace
-   We can note that Null *Space* includes the word space in it: This is
+   We can note that null *space* includes the word space in it: This is
    because on top of being a *subset* of some 
 
    #+BEGIN_SRC latex
@@ -116,7 +116,7 @@
     Note that this resulting generator with {*u*, *v*, *w*},
     *u*, *v*, *w* will be linearly independant *UNLESS* *u*,
     *v*, and *w* are zero vectors. Aka, in this example
-    u, v, and w all play unique roles in the vector function,
+    *u*, *v*, and *w* all play unique roles in the vector function,
     so to say.
 
 *** Spanning Set and Free Variables
@@ -124,3 +124,4 @@
     the number of free variables. This is clearly visible 
     in this example and will hold true to any number of
     free variables.
+

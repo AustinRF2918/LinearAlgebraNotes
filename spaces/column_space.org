@@ -1,0 +1,28 @@
+* The Column Space Of A Matrix
+  The null space (mentioned in null_space.org) has a closely related
+  cousin: The column space. This is *directly related* to the range
+  of a matrix, and indeed, it actually *is* the range of a matrix.
+  
+** Definition Of A Column Space
+   The definition of a column space is simply expressed as the span
+   of all of the vectors of a matrix, programatically:
+
+   #+BEGIN_SRC mathematica
+     Col[A_] := Span[A[[1;;Length[A]]
+   #+END_SRC
+   
+   Another way of writing this is as follows:
+   #+BEGIN_SRC latex
+    \begin{equation}Col A = {\vec{b} : \vec{b} = A\vec{x} for some \vec{x} in \mathbb{R}^m}\end{equation} 
+   #+END_SRC
+   
+** Relation To Subspace
+   We can note that like a null space, column space also has the word
+   space in it. Indeed the column space of an n x m matrix A is a 
+   subspace of 
+   #+BEGIN_SRC latex
+    \begin{equation}\mathbb{R}^n\end{equation} 
+   #+END_SRC
+   
+   Note that that this is *different* than the space of which a null
+   space is a subspace..
