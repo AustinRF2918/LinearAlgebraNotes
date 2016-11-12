@@ -84,3 +84,43 @@
   some attributes and is naturally slower. Using math, specifically with
   *Nul A* allows us to get an explicit definition of the solution of 
   a implicitly defined trait.
+* Receiving Explicit Defintion Of Nul A Output
+  This is a fairly simple algorithm: Here are the steps.
+** Step 1
+   First we must arrange our matrix to be of form:
+   #+BEGIN_SRC latex
+     \begin{equation}A\vec{u} = \vec{0}\end{equation}
+   #+END_SRC
+   
+** Step 2
+   Next, we must perform a row reduction algorithm upon
+   the resultant matrix.
+   
+   #+BEGIN_SRC mathematica
+     Reduce[x]
+   #+END_SRC
+   
+** Step 3
+   Once we have performed our reduce operation, we must 
+   decompose our vectors using our free variables as 
+   atomic weights upon the vectors, and our non-free
+   variables in terms of where they appear.
+   
+** Step 4
+   Once we perform all these operations, we can safely
+   assume that all of the linear combinations of the
+   decomposed units are parts of Nul A.
+   
+** Notes
+*** Linear Independance
+    Note that this resulting generator with {*u*, *v*, *w*},
+    *u*, *v*, *w* will be linearly independant *UNLESS* *u*,
+    *v*, and *w* are zero vectors. Aka, in this example
+    u, v, and w all play unique roles in the vector function,
+    so to say.
+
+*** Spanning Set and Free Variables
+    The amount of vectors in the resultant set will be 
+    the number of free variables. This is clearly visible 
+    in this example and will hold true to any number of
+    free variables.
