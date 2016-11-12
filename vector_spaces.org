@@ -27,3 +27,60 @@
 
    These three facts are the definition of a subspace, therefore we have shown
    why the null space is, in fact, a subspace.
+
+* Explicit and Implicit Definitions
+  An explicit definition of an idea can be thought of as a *defined trait bound*,
+  something that at "compile time" can be checked for, on the other hand an
+  implicit defition resembles what can be thought of as a *dynamic trait bound*,
+  in which we check for some rule that may or may not pass at runtime: This can
+  be thought of like so:
+
+  #+BEGIN_SRC rust
+    // An example of a defined trait bound in Rust.
+    trait Shape {
+      fn area(&self) -> f64,
+      fn perimeter(&self) -> f64,
+      fn sides(&self) -> u32,
+    }
+    
+    // This may not be a realistic API, but it gets the point
+    // across, now lets define a square structure.
+    
+    struct Square {
+      area: f64
+    }
+    
+    impl Shape for Square {
+      fn area(&self) -> f64 {
+        self.area
+      }
+      
+      fn perimeter(&self) -> f64 {
+        4 * Sqrt(area())
+      }
+      
+      fn sides(&self) -> u32 {
+        self.sides
+      }
+    }
+    
+    // Note that this structure is now static and sized in memory. Let's imagine
+    // we  created a "runtime shape"
+    
+    struct RuntimeShape {
+      // fields
+    }
+    
+    fn is_square(s: &Shape) -> bool {
+      s.sides() == 4 
+    }
+    
+  #+END_SRC
+  
+  is_square shows a programmatic display of implicit definitions: Instead of 
+  directly defining the trait on the structure, we allow static bounds to 
+  be modified via mutability and then check as needed for the implicit 
+  definition of square. This forces us to check that something fullfills 
+  some attributes and is naturally slower. Using math, specifically with
+  *Nul A* allows us to get an explicit definition of the solution of 
+  a implicitly defined trait.
