@@ -40,3 +40,6 @@
    #+BEGIN_SRC mathematica
      DimensionNumber[Nul[A]] == HorizontalLength[A]
    #+END_SRC
+   
+**** Mnenomic
+     CoVerNHant
