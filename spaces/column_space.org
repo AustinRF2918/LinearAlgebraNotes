@@ -1,5 +1,5 @@
 * The Column Space Of A Matrix
-  The null space (mentioned in null_space.org) has a closely related
+  The null space (mentioned in null_space.org) has not so closely related
   cousin: The column space. This is *directly related* to the range
   of a matrix, and indeed, it actually *is* the range of a matrix.
   
@@ -13,10 +13,10 @@
    
    Another way of writing this is as follows:
    #+BEGIN_SRC latex
-    \begin{equation}Col A = {\vec{b} : \vec{b} = A\vec{x} for some \vec{x} in \mathbb{R}^m}\end{equation} 
+    \begin{equation}Col A = \{\vec{b} : \vec{b} = A\vec{x} \mbox{ for some } \vec{x} \in \mathbb{R}^m\}\end{equation} 
    #+END_SRC
    
-** Relation To Subspace
+** Relation To Null Space
    We can note that like a null space, column space also has the word
    space in it. Indeed the column space of an n x m matrix A is a 
    subspace of 
@@ -26,3 +26,17 @@
    
    Note that that this is *different* than the space of which a null
    space is a subspace..
+   
+** Contrast To Null Space
+   The null space and the column space in general can be thought of
+   as being subspaces of different spaces: The only case in which
+   this is not true is the case of a square matrix.
+   
+*** Simple Expression
+   #+BEGIN_SRC mathematica
+     DimensionNumber[Col[A]] == VecticalLength[A]
+   #+END_SRC
+   And
+   #+BEGIN_SRC mathematica
+     DimensionNumber[Nul[A]] == HorizontalLength[A]
+   #+END_SRC
