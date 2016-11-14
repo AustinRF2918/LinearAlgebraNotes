@@ -81,3 +81,15 @@
   This shows exactly how the recursive definition should be used: Polynomials are more
   complex than simple tuples: We can't represent them as simple linear equations. This
   means we have to expand out the base cases and relate them to other items in the set.
+  
+* Definition Of Basis Attribute
+  Let's create the concept of a Basis, which references type vector space. Let's set
+  the requirements for such an attribute given a vector space V.
+  
+** Linear Independance
+   Given the indexed set of vectors B, B is linearly independant.
+   
+** Spanning Subset
+   Said indexed set has a subspace H = Span{[b for b in B])
+   
+  In the case that both of these conditions hodl, we say that V is a basis for H.
