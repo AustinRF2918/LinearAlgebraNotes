@@ -1,0 +1,8 @@
+* Determining If A Vector *W* Is In A Column Space Of A
+  Use a reduction algorithm on A <> *W*, observe
+  if there is a free (all zero) row.
+
+* Determining If A Vector *W* Is In A Null Space Of A
+  Perform Operation A * *W*, observe output. If we 
+  have null output, then we can be certain that it
+  (*W*) is included in the null space.
