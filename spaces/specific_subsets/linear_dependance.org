@@ -46,5 +46,38 @@
     #+BEGIN_SRC Mathematica
      (* Define three vectors v1, v2, v3 here *)
      IsZeroVector[w1_] :=   w1*v1 == { 0, ... , 0 }
-   #+END_SRC
-   
+    #+END_SRC
+    
+* Recursive Definition Of Linear Dependance
+  Lets consider an ordered set of vectors in which length[set] > 1,
+  so long as the first vector isn't a zero vector, said set will be
+  linear dependance if for any item n in our set is a linear combination
+  of the reverse rest of the ordered set.
+
+* Difference Between Linear Dependance in Real Dimensions and General Dimensions.
+  In general vector space, the vectors are not simple primitive tuples. This 
+  means, in essence, that a homogenous equation ( f[...] == 0 ) cannot
+  be written as a system of n linear equations. *We cannot reify each*
+  *vector into a matrix.*
+
+* Example From Book
+  Let's consider a higher order function PolynomiaGenerator[n]. PolynomialGenerator
+  takes an integer value n and outpus a function taking parameter "t". This looks like
+  so. (Note this is not real Haskell)
+
+  #+BEGIN_SRC Haskell
+    PolynomialGenerator :: Integer -> Polynomial
+    PolynomialGenerator 1 = 1
+    PolynomialGenerator 2 = t
+    PolynomialGenerator 3 = 1 - t
+  #+END_SRC
+  
+  Now note that we can express PolynomialGenerator 3 like so:
+
+  #+BEGIN_SRC Haskell
+    PolynomialGenerator 3 = PolynomialGenerator 1 - PolynomialGenerator 2
+  #+END_SRC
+  
+  This shows exactly how the recursive definition should be used: Polynomials are more
+  complex than simple tuples: We can't represent them as simple linear equations. This
+  means we have to expand out the base cases and relate them to other items in the set.
