@@ -93,3 +93,29 @@
    Said indexed set has a subspace H = Span{[b for b in B])
    
   In the case that both of these conditions hodl, we say that V is a basis for H.
+  
+* Definition Of Standard Basis
+  Let's imagine a function Vectors[A] where A is a matrix and Vectors destructures
+  said matrix into its cooresponding vectors as a set. StandardBasis[n] := Vectors[I[n]].
+  
+  Let's think of the first condition: The set being linearly independant basically 
+  guarentees that each individual value in the set a single atomic building block
+  we need to build a set. The second guarentees that it actually relates to the set
+  itself.
+  
+* Creating Efficent Sets
+  The standard basis allows us to create "efficent", or "refined" sets. By showing
+  that certain vectors are not "atomic", we can reduce the required vectors in 
+  span. Following this we can show linear independance through various methods, 
+  then we extract the result. This has a name: *spanning set*.
+  
+* Formal Definition Of Spanning Set
+  Let S be a set of vectors from v_1 to v_p. Let S be a subset of V. Let H
+  be in the Span of Vectors of S. The following conditions must stay true:
+  
+** Condition A
+   If one successive vectors is a linear combo of the reverse rest, then
+   we can remove said vectors and still get a spanning set.
+
+** Condition B
+   If H != {0_vec}, some subset of S is its basis.
