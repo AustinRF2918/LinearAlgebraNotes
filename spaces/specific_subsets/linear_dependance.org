@@ -1,0 +1,39 @@
+* The Definition Of *Linear Independence*
+   #+BEGIN_SRC latex
+    \begin{equation}c_1\vec{v_1} + c_2\vec{v_2} + ... + c_p\vec{v_p} = 0\end{equation} 
+   #+END_SRC
+   
+   What does this mean exactly? It means we take the summation of *all the desired*
+   *vectors* that we have, and give then associated *scalar weights*. Let's make 
+   a theoretical Mathematica equation to represent 3 vectors and a generator 
+   to make a test for such an idea:
+
+   #+BEGIN_SRC Mathematica
+     (* Define three vectors v1, v2, v3 here *)
+     IsZeroVector[w1_, w2_, w3_] :=  ( w1 v1 + w2 v2 + w3 v3 ) == { 0, ... , 0 }
+     isZeroVector[1, 1, 1]
+     (* May output either true or false *)
+   #+END_SRC
+   
+   In such a function, our set of vectors are deemed to be linearly independent
+   if, and only if, the *ONLY* input that gets us a true evaluation is as follows
+
+   #+BEGIN_SRC Mathematica
+     isZeroVector[0, 0, 0]
+   #+END_SRC
+   
+   Aka, only the trivial values (and naturally, zero vectors).
+   
+* The Definition Of *Linear Dependence*
+  A set of vectors is linearly dependant, on the other hand, if and only if 
+  we have some set of scalars we can plug in to our theoretical function that
+  gets us out the zero vectors: see:
+
+   #+BEGIN_SRC Mathematica
+     isZeroVector[1, 2, 3]
+     (* Let's say this outputs true. *)
+   #+END_SRC
+   
+   In the case that such an evaluation happens, we can rest assured that our
+   set of vectors that we have defined are linearly dependant.
+
