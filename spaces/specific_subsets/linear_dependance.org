@@ -37,3 +37,14 @@
    In the case that such an evaluation happens, we can rest assured that our
    set of vectors that we have defined are linearly dependant.
 
+* Extension To A Base Case
+  This idea actually extends to a base case: Lets consider that we have only
+  one vector. In such a case we may build a set from said single vector, a
+  set with one item. When is such a set going to be linearly independant
+  for such a function:
+
+    #+BEGIN_SRC Mathematica
+     (* Define three vectors v1, v2, v3 here *)
+     IsZeroVector[w1_] :=   w1*v1 == { 0, ... , 0 }
+   #+END_SRC
+   
